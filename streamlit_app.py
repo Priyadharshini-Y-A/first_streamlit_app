@@ -34,7 +34,7 @@ try:
     #import requests
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
     #streamlit.text(fruityvice_response.json())--just write the data to screen
-Except URLError as e:
+except URLError as e:
   streamlit.error()
   
 # Normalize the json response
