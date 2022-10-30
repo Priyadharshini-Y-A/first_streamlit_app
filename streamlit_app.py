@@ -57,13 +57,11 @@ def get_friut_load_list():
     my_cur.execute("SELECT * from fruit_load_list")
     return my_cur.fetchall()
 #add autton to load fruit
-if streamlit.button('Get frut load list')
-my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-my_data_rows = get_fruit_load_list()
-#streamlit.text("The fruit load list contains:")
-#streamlit.text(my_data_row)
-streamlit.dataframe(my_data_rows)
-streamlit.stop()
+if streamlit.button('Get frut load list'):
+  my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+  my_data_rows = get_fruit_load_list()
+  streamlit.dataframe(my_data_rows)
+  streamlit.stop()
 
 
 #Another section to display Fruitvice API response
